@@ -1,0 +1,32 @@
+{
+  "name": "grant_be",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "collect_data": "node utils/instant_collect_data.js",
+    "force_sync": "node utils/force_sync.js",
+    "export": "node utils/export_to_csv.js",
+    "start": "node app.js"
+  },
+  "author": "gwynart",
+  "license": "ISC",
+  "dependencies": {
+    "@koa/cors": "2",
+    "@sendgrid/mail": "^6.5.5",
+    "cheerio": "^1.0.0-rc.5",
+    "cron": "^1.8.2",
+    "export-to-csv": "^0.2.1",
+    "koa": "^2.13.1",
+    "koa-body": "^4.2.0",
+    "koa-bodyparser": "^4.3.0",
+    "koa-router": "^7.4.0",
+    "node-fetch": "^2.6.1",
+    "pg": "^8.0.3",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.22.3",
+    "sequelize-cli": "^5.4.0",
+    "uuid": "^3.4.0",
+    "xml-js": "^1.6.11"
+  }
+}
