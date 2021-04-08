@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
         },
         count: {
-            type: DataTypes.NUMBER,
+            type: DataTypes.NUMERIC,
             default: 0,
         },
     }, {
