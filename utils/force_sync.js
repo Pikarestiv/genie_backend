@@ -20,9 +20,7 @@ async function force_sync() {
   await db.user_received_grant.sync({force: true});
   console.log('User Received Grant synced.'); 
   await db.user_tag.sync({force: true});
-  console.log('User Tags synced.'); 
-
-  
-  // await db.userSearchCount.sync({force: true});
-  // console.log('User Search Count synced.'); 
+  console.log('User Tags synced.');   
+  await db.userSearchCount.sync({force: true});
+  console.log('User Search Count synced.'); 
 }
