@@ -81,6 +81,15 @@ async function collect_data() {
     
     // Parsing grant body to gat additional data
     const $body = $.load(element.details.body);
+    let change_history = '<ol>';
+    element.details.change_history.forEach(el => {
+      change_history += `<li class="">
+                            <time class="" datetime="${el.public_timestamp}">${new Date (Date.parse('2016-03-29T15:59:15.000Z'))}</time>
+                            <p class="">${el.note}</p>
+                          </li>`;
+    });
+    change_history += '</ol>';
+    
     let rawPrice = $body('#how-much-will-be-paid').next().text();
     if (!rawPrice) {
       rawPrice = $body('#how-much-is-paid').next().text();
@@ -109,6 +118,7 @@ async function collect_data() {
       web_link: element.web_link,
       api_link: element.api_link,
       body: element.details.body,
+      change_history: change_history,
       raw_price: rawPrice,
       source,
       parsed_price: isNaN(parsedPrice) ? null : parsedPrice,
