@@ -21,6 +21,10 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.TEXT,
       allowNull: true,
     },
+    change_history: {
+      type: DataTypes.TEXT,
+      allowNull: true,
+    },
     raw_price: {
       type: DataTypes.TEXT,
       allowNull: true
